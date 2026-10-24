@@ -193,3 +193,31 @@ body.cartview .stage,body.cartview .ticker,body.cartview #drop,body.cartview #ma
 .legal{border-top:1px solid var(--line);max-width:860px}
 .legal h2{font-size:clamp(2.2rem,6vw,3.6rem);margin-bottom:18px}
 .legal p{color:var(--text2);margin:0 0 12px}
+
+
+/* ---- size menu (custom, scarlet hover) ---- */
+.card{overflow:visible}
+.ph{border-radius:6px 6px 0 0}
+.buy .sz{position:relative;flex:0 0 96px}
+.sz-btn{width:100%;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:11px 10px;background:var(--field);color:var(--ink);border:1px solid #bfb1a9;border-radius:6px;font:500 .95rem "DM Sans",sans-serif;text-align:left;cursor:pointer}
+.sz-btn:hover,.sz-btn[aria-expanded="true"]{border-color:var(--red)}
+.sz-btn:focus-visible{outline:2px solid var(--red-hot);outline-offset:2px}
+.sz-btn::after{content:"";width:7px;height:7px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg) translate(-2px,-2px);flex:none}
+.sz.need .sz-btn{border-color:var(--red-hot);box-shadow:0 0 0 2px var(--red-hot)}
+.sz-list{position:absolute;left:0;right:0;top:calc(100% + 4px);z-index:20;margin:0;padding:4px;list-style:none;background:var(--field);border:1px solid var(--line);border-radius:6px;box-shadow:0 10px 24px rgba(36,27,28,.18);max-height:260px;overflow:auto}
+.sz-list li{padding:9px 10px;border-radius:4px;cursor:pointer;font-weight:500;color:var(--ink)}
+.sz-list li:hover,.sz-list li:focus,.sz-list li[aria-selected="true"]{background:var(--red);color:var(--on-red);outline:0}
+.sz-list li:focus-visible{outline:2px solid var(--red-hot);outline-offset:-2px}
+@media(max-width:700px){
+  .buy .sz{flex:none;width:100%}
+  .hero p{font-size:.95rem;max-width:30ch;margin:4px 0 22px}
+}
+
+/* ---- policies page ---- */
+#policies .legal{padding-top:28px}
+#policies .legal+.legal{margin-top:56px}
+#policies .legal h1{font:900 clamp(3rem,9vw,6rem)/.95 "Big Shoulders Display",Impact,sans-serif;margin:14px 0 24px}
+#policies .legal p{color:var(--text2);margin:0 0 14px;max-width:62ch}
+
+/* cart page content is always shown on cart.html */
+#cartpage{display:block}
